@@ -24,3 +24,31 @@ print(f"Latitude: {coordenadas[0]}")
 
 # coordendas [0] = 25.000, não funcionaria, daria TypeError, já que tuplas são imutáveis
 
+print("\n=== Dicionários ===")
+
+produto = {
+    "nome": "Teclado",
+    "preco": 120.00,
+    "estoque": 10
+}
+
+print(f"Dicionário inicial: {produto}")
+
+print(f"Nome do produto: {produto["nome"]}")
+
+precoUsuario = float(input("Digite o novo valor do nosso produto: "))
+produto["preco"] = precoUsuario
+
+print(f"O novo preço do produto é de {produto["preco"]}")
+
+# Inserindo uma nova chave
+
+produto["marca"] = "Logitech"
+print(f"Nova marca: {produto["marca"]}")
+
+# Listando todas as chaves de produto
+
+print("\nDados completos do produto: ")
+
+for chave, valor in produto.items():
+    print(f"{chave} : {valor}")
